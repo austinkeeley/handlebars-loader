@@ -11,4 +11,4 @@ Note that if you want to use it, it assumes the default namespace that `grunt-co
 root of the template name.  You'll have to change things for your own set up.
 
 In the included demo, I compiled one template to `scripts/templates.js` and another template is dynamically loaded.  By toggling the
-handlebars.LOAD_DYNAMICALLY variable, you can choose how they get loaded.
+`handlebars.LOAD_DYNAMICALLY` variable, you can choose how they get loaded.
