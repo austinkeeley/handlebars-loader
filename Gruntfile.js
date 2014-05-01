@@ -12,6 +12,8 @@ module.exports = function (grunt) {
     // Load grunt tasks automatically
     require('load-grunt-tasks')(grunt);
 
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
+
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
@@ -132,6 +134,16 @@ module.exports = function (grunt) {
                 '!<%= config.app %>/scripts/vendor/*',
                 'test/spec/{,*/}*.js'
             ]
+        },
+
+        handlebars: {
+          dist: {
+            options: {
+            },
+            files: {
+              '<%= config.app %>/scripts/templates.js': '<%= config.app %>/templates/second.handlebars'
+            }
+          }
         },
 
         // Mocha testing framework configuration options
